@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public Users createCustomer(Users user){
-        user.setUserId(UUID.randomUUID().toString());
+        
         user.setUserPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
